@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h2>{{ name }}</h2>
+                <ul class="list-unstyled">
+                    <div class="row">
+                        <div class="col-md-3"><li>Lieu : {{ city }}</li></div>
+                        <div class="col-md-3"><li>Membre Meetup depuis : {{ joined }}</li></div>
+                        <div class="col-md-3"><li>Biographie : {{ bio }}</li></div>  
+
+                    </div>
+
+
+
+                </ul>
+
+            </div>
+            <div class="col-md-3"><img src="{{ photo_link }}" class="thumbnail" /></div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9"></div>
+            <div class="col-md-3">
+                <h3>Centres d'intérêt</h3>
+
+                {% for topic in topics %}
+
+                    <a href="#">{{ topic }}</a>
+
+                {% endfor %}
+            </div>      
+
+
+
+        </div>
+
+
+    </div> 
+
+
+    <div class="row">
+
+        <div class="col-md-3"></div>
+
+    </div>
+
+
+{% endblock %}

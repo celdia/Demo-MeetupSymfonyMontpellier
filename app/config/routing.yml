@@ -1,0 +1,8 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+
+profile:
+    path: /profile
+    defaults: { _controller: AppBundle:Profile:meetup }
